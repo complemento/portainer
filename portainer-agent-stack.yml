@@ -39,7 +39,8 @@ services:
       - traefik.enable=true
       - traefik.port=9000
       # for unique app FQDN
-      - traefik.frontend.rule=Host:${PORTAINER_FQDN};PathPrefixStrip:/manager
+      - traefik.frontend.rule=Host:${PORTAINER_FQDN}
+      #- traefik.frontend.rule=Host:${PORTAINER_FQDN};PathPrefixStrip:/manager
       - traefik.protocol=http
       - traefik.docker.network=web
 
